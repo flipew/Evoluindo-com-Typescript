@@ -70,3 +70,25 @@ function processarResposta(resposta: RespostaServidor): void {
 processarResposta("Operação concluída");
 processarResposta(true);
 processarResposta(false);
+
+// Exercício 6
+interface Estudante {
+    nome: string;
+    curso: string;
+}
+
+interface Trabalhador {
+    empresa: string;
+    cargo: string;
+}
+
+type EstudanteTrabalhador = Estudante & Trabalhador;
+
+const estudanteTrabalhador: EstudanteTrabalhador = {
+    nome: "Mariana",
+    curso: "Engenharia de Software",
+    empresa: "TechCorp",
+    cargo: "Desenvolvedora Júnior"
+};
+
+console.log(estudanteTrabalhador);
